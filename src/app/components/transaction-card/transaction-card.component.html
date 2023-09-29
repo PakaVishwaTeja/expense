@@ -1,0 +1,27 @@
+<div class="w-[700px] flex justify-between bg-slate-50 p-10 rounded-xl hover:scale-[101%] transition duration-200">
+    <div class="flex w-[400px] flex-row justify-between">
+        <div class="flex justify-between flex-col">
+            <h3 class="text-3xl font-bold">{{txn?.description}}</h3>
+            <p class="text-sm text-gray-500">{{txn?.last_updated}}</p>
+        </div>
+        <div class="flex items-end flex-col justify-between " >
+            <h2 class="text-3xl text-green-400"><span>{{user?.userId == txn?.fromUser ? "+":"-"}}</span>{{txn?.amount}}</h2>
+            <p class="text-xs text-gray-500">{{user?.userId == txn?.fromUser ? "You'll get from":"Please pay"}}</p>
+            <h3>{{txn?.toUser?.username}}</h3>
+        </div>
+    </div>
+    <button class="  h-auto p-5 rounded-xl hover:scale-110 transition duration-200 active:scale-90" [ngClass]="  true   ? 'red': 'green'" >
+        settle now!
+    </button>
+</div>
+
+<!-- export interface Txn{
+    txnId : number;
+    description : string;
+    amount : number;
+    isPaid: boolean;
+    fromUser: User;
+    toUser: User;
+    last_updated?: string;
+} 
+|| txn.isPaid-->

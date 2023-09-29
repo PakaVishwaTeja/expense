@@ -1,0 +1,19 @@
+<div>
+    <app-header/>
+        
+    <div>
+        <mat-tab-group>
+            <mat-tab label="Make a Transaction"> 
+                <div>
+                    <app-make-transaction></app-make-transaction>
+                </div>
+            </mat-tab>
+            <mat-tab label="View all Transactions"> 
+                <div class="w-full flex flex-col items-center p-5">
+                    <app-transaction-card></app-transaction-card>    
+                </div>
+                
+            </mat-tab>
+        </mat-tab-group>
+    </div>    
+</div>
